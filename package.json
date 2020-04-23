@@ -1,0 +1,14 @@
+{
+  "name": "HangmanBot",
+  "version": "1.0.0",
+  "description": "Discord bot for playing hangman.",
+  "main": "index.js",
+  "author": "Bumbatumbarumba",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^12.2.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
