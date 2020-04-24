@@ -26,7 +26,7 @@ client.on("message", message => {
         secondpart = message.content.split(" ")[1]
 
         if (secondpart == "start") {
-            if (!this.gameStarted) {
+            if (!gameStarted) {
                 gameStarted = true
                 botfuncs.InitRound()
                 message.reply(botfuncs.DisplayMan())
@@ -36,7 +36,7 @@ client.on("message", message => {
             }
         }
         else if (secondpart == "stop") {
-            if (this.gameStarted) {
+            if (gameStarted) {
                 gameStarted = false
                 message.reply("Stopping game, please enter '!hb start' to start a new round.")
             }
@@ -45,7 +45,7 @@ client.on("message", message => {
             }
         }
         else if (secondpart == "help") {
-            message.reply("List of commands:\n !hb start, !hb stop, !hb help, !hb scores, !hb \"guess the letter or word in quotation marks\"")
+            message.reply("List of commands:\n" + "!hb start - starts the game,\n" + "!hb stop - stops the game,\n" + "!hb help - shows the list of commands,\n" + "!hb scores - displays scores if there are any,\n" + "!hb \"guess\" - put your guess in quotation marks")
         } 
         else if (secondpart == "scores") {
             message.reply("These are the scores: " + JSON.stringify(currentScores))
